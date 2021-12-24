@@ -1,13 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Login from "./views/Login";
+import Dashboard from "./views/Dashboard";
+
+import {BrowserRouter, Switch ,Route} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       <h1>Hello World!</h1>
-      </header>
-    </div>
+  <BrowserRouter>
+    <Switch>
+        <Route exact path="/" component = {Login}/>
+        <Route exact path="/dashboard" component={Dashboard}/>
+    </Switch>
+  </BrowserRouter>
   );
 }
 
